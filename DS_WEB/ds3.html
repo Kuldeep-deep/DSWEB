@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three Sections Centered and Side by Side with Pop-up Lists and Iframe</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: ; /* Center items horizontally */
+        }
+
+        .sections {
+            display: flex; /* Arrange Section 1, Section 2, and Iframe side by side */
+            flex-basis: 500px;
+        }
+
+        section {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #section1 {
+            flex-grow: ; /* Expand Section 1 to fill the available space */
+            background-color: #494949;
+        }
+
+        #iframe-container {
+            width: 30%; /* Adjust the width of the iframe container */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        iframe {
+            width: 100%; /* Make the iframe take the full width of its container */
+            height: 100%; /* Set the height as needed */
+        }
+
+        #section2 {
+            text-align: center;
+            font-size: 21px;
+            width: 10%;
+           /* flex-grow: 1;  Expand Section 2 to fill the available space to the right */
+            border: none;
+            background-color: rgb(0, 0, 0);
+            margin: 0;
+            float: left;
+            padding: 0%;
+            padding-top: 30px;
+        }
+        #section3 {
+            display: flex;
+            flex-basis: 700px;
+            flex-grow: 1; /* Expand Section 3 to fill the available space to the right */
+            border: none; /* Remove the border from Section 3 */
+            margin: 0;}
+        .main_hed{
+            background-color: #f9f9f9;
+            color: black;
+
+        }
+
+        .popup-list {
+            /* display: flex;
+            flex-direction: column; */
+            position: relative;
+            display: inline-block;
+            background-color: #494949;
+            padding-bottom: 5px;
+        }
+
+        .popup-list-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .popup-list-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup-list:hover .popup-list-content {
+            display: block;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline solid;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="section1">
+            <h1 >DATA STRUCTURE</h1>
+            <!-- <p>This is the first section of the HTML document.</p> -->
+        </section>
+        <div class="sections">
+            <section id="section2">
+                <!-- <h1>Section 2</h1>
+                <p>This is the second section of the HTML document.</p> -->
+                <div class="popup-list">
+                    <a class="main_hed" href="#">Arrays</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\a1.html" onclick="changeIframeSrc('index_files\a1.htmll')">Index</a>
+                        <a href="DSA programs\arrays\A-1p.c" onclick="changeIframeSrc('DSA programs\arrays\A-1p.c')">Program 1</a>
+                        <a href="DSA programs\arrays\A-2p.c" onclick="changeIframeSrc('DSA programs\arrays\A-2p.c')">Program 2</a>
+                        <a href="DSA programs\arrays\A-3p.c" onclick="changeIframeSrc('DSA programs\arrays\A-3p.c')">Program 3</a>
+                        <a href="DSA programs\arrays\A-4p.c" onclick="changeIframeSrc('DSA programs\arrays\A-4p.c')">Program 4</a>
+                        <a href="DSA programs\arrays\A-5p.c" onclick="changeIframeSrc('DSA programs\arrays\A-5p.c')">Program 5</a>
+                        <a href="DSA programs\arrays\A-6p.c" onclick="changeIframeSrc('DSA programs\arrays\A-6p.c')">Program 6</a>
+                        <a href="DSA programs\arrays\A-7p.c" onclick="changeIframeSrc('DSA programs\arrays\A-7p.c')">Program 7</a>
+                        <a href="DSA programs\arrays\A-8p.c" onclick="changeIframeSrc('DSA programs\arrays\A-8p.c')">Program 8</a>
+                        <a href="DSA programs\arrays\A-9p.c" onclick="changeIframeSrc('DSA programs\arrays\A-9p.c')">Program 9</a>
+                        <a href="DSA programs\arrays\A-1p.c" onclick="changeIframeSrc('DSA programs\arrays\A-10p.c')">Program 10</a>
+                        <a href="DSA programs\arrays\A-10p.c" onclick="changeIframeSrc('DSA programs\arrays\A-1p.c')">Program 11</a>
+                        <a href="DSA programs\arrays\A-11p.c" onclick="changeIframeSrc('DSA programs\arrays\A-11p.c')">Program 12</a>
+                        <a href="DSA programs\arrays\A-12p.c" onclick="changeIframeSrc('DSA programs\arrays\A-12p.c')">Program 13</a>
+                        <a href="DSA programs\arrays\A-13p.c" onclick="changeIframeSrc('DSA programs\arrays\A-13p.c')">Program 14</a>
+                        <a href="DSA programs\arrays\A-14p.c" onclick="changeIframeSrc('DSA programs\arrays\A-14p.c')">Program 15</a>
+                        <a href="DSA programs\arrays\A-15p.c" onclick="changeIframeSrc('DSA programs\arrays\A-15p.c')">Program 16</a>
+                        <a href="DSA programs\arrays\A-16p.c" onclick="changeIframeSrc('DSA programs\arrays\A-16p.c')">Program 17</a>
+                        <a href="DSA programs\arrays\A-17p.c" onclick="changeIframeSrc('DSA programs\arrays\A-17p.c')">Program 18</a>
+                        
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed"href="#">2D Arrays</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\2d_a.html" onclick="changeIframeSrc('index_files\2d_a.html')">Index</a>
+                        <a href="DSA programs\2d array\1.c" onclick="changeIframeSrc('DSA programs\2d array\1.c')">Program 1</a>
+                        <a href="DSA programs\2d array\2.c" onclick="changeIframeSrc('DSA programs\2d array\2.c')">Program 2</a>
+                        <a href="DSA programs\2d array\3.c" onclick="changeIframeSrc('DSA programs\2d array\3.c')">Program 3</a>
+                        <a href="DSA programs\2d array\4.c" onclick="changeIframeSrc('DSA programs\2d array\4.c')">Program 4</a>
+                        <a href="DSA programs\2d array\5.c" onclick="changeIframeSrc('DSA programs\2d array\5.c')">Program 5</a>
+                        <a href="DSA programs\2d array\6.c" onclick="changeIframeSrc('DSA programs\2d array\6.c')">Program 6</a>
+                        
+    
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed" href="#">Strings</a>
+                    <div class="popup-list-content">
+                        <a href="index_filesindex_files\str.html" onclick="changeIframeSrc('index_filesindex_files\str.html')">Index</a>
+                        <a href="DSA programs\strings\1.c" onclick="changeIframeSrc('DSA programs\strings\1.c')">Program 1</a>
+                        <a href="DSA programs\strings\2.c" onclick="changeIframeSrc('DSA programs\strings\2.c')">Program 2</a>
+                        <a href="DSA programs\strings\3.c" onclick="changeIframeSrc('DSA programs\strings\3.c')">Program 3</a>
+                        <a href="DSA programs\strings\4.c" onclick="changeIframeSrc('DSA programs\strings\4.c')">Program 4</a>
+                        <a href="DSA programs\strings\5.c" onclick="changeIframeSrc('DSA programs\strings\5.c')">Program 5</a>
+                        <a href="DSA programs\strings\6.c" onclick="changeIframeSrc('DSA programs\strings\6.c')">Program 6</a>
+                        <a href="DSA programs\strings\7.c" onclick="changeIframeSrc('DSA programs\strings\7.c')">Program 7</a>
+                        <a href="DSA programs\strings\8.c" onclick="changeIframeSrc('DSA programs\strings\8.c')">Program 8</a>
+                        <a href="DSA programs\strings\9.c" onclick="changeIframeSrc('DSA programs\strings\9.c')">Program 9</a>
+                        <a href="DSA programs\strings\10.c" onclick="changeIframeSrc('DSA programs\strings\10.c')">Program 10</a>
+                        <a href="DSA programs\strings\11.c" onclick="changeIframeSrc('DSA programs\strings\11.c')">Program 11</a>
+                        <a href="DSA programs\strings\12.c" onclick="changeIframeSrc('DSA programs\strings\12.c')">Program 12</a>
+                        <a href="DSA programs\strings\13.c" onclick="changeIframeSrc('DSA programs\strings\13.c')">Program 13</a>
+                        <a href="DSA programs\strings\14.c" onclick="changeIframeSrc('DSA programs\strings\14.c')">Program 14</a>
+                        <a href="DSA programs\strings\15.c" onclick="changeIframeSrc('DSA programs\strings\15.c')">Program 15</a>
+                        <a href="DSA programs\strings\16.c" onclick="changeIframeSrc('DSA programs\strings\16.c')">Program 16</a>
+                        <a href="DSA programs\strings\17.c" onclick="changeIframeSrc('DSA programs\strings\17.c')">Program 17</a>
+                        <a href="DSA programs\strings\18.c" onclick="changeIframeSrc('DSA programs\strings\18.c')">Program 18</a>
+                        <a href="DSA programs\strings\19.c" onclick="changeIframeSrc('DSA programs\strings\19.c')">Program 19</a>
+                        
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed" href="#">Searching </a>
+                    <div class="popup-list-content">
+                        <a href="index_files\serch.html" onclick="changeIframeSrc('index_files\serch.html')">Index</a>
+                        <a href="link1.html">Link 1</a>
+                        <a href="link2.html">Link 2</a>
+                        <a href="link3.html">Link 3</a>
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed" href="#">Sorting</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\sort.html" onclick="changeIframeSrc('index_files\sort.html')">Index</a>
+                        <a href="link1.html">Link 1</a>
+                        <a href="link2.html">Link 2</a>
+                        <a href="link3.html">Link 3</a>
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed"  href="#">Stack</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\s_index.html" onclick="changeIframeSrc('index_files\s_index.html')">Index</a>
+                        <a href="DSA programs\stack_h\stack1.html" onclick="changeIframeSrc('DSA programs\stack_h\stack1.html')">Program 1</a>
+                        <a href="DSA programs\stack_h\stack2.html" onclick="changeIframeSrc('DSA programs\stack_h\stack2.html')">Program 2</a>
+                        <a href="DSA programs\stack_h\stack3.html" onclick="changeIframeSrc('DSA programs\stack_h\stack3.html')">Program 3</a>
+                        <a href="DSA programs\stack_h\stack4.html" onclick="changeIframeSrc('DSA programs\stack_h\stack4.html')">Program 4</a>
+                        <a href="DSA programs\stack_h\stack5.html" onclick="changeIframeSrc('DSA programs\stack_h\stack5.html')">Program 5</a>
+                        <a href="DSA programs\stack_h\stack6.html" onclick="changeIframeSrc('DSA programs\stack_h\stack6.html')">Program 6</a>
+                        <a href="DSA programs\stack_h\stack7.html" onclick="changeIframeSrc('DSA programs\stack_h\stack7.html')">Program 7</a>
+                        <a href="DSA programs\stack_h\stack8.html" onclick="changeIframeSrc('DSA programs\stack_h\stack8.html')">Program 8</a>
+                        <a href="DSA programs\stack_h\stack9.html" onclick="changeIframeSrc('DSA programs\stack_h\stack9.html')">Program 9</a>
+                        <a href="DSA programs\stack_h\stack10.html" onclick="changeIframeSrc('DSA programs\stack_h\stack10.html')">Program 10</a>
+                        <a href="DSA programs\stack_h\stack11.html" onclick="changeIframeSrc('DSA programs\stack_h\stack11.html')">Program 11</a>
+                        <a href="DSA programs\stack_h\stack12.html" onclick="changeIframeSrc('DSA programs\stack_h\stack12.html')">Program 12</a>
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed"  href="#">Queue</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\que.html" onclick="changeIframeSrc('index_files\que.html')">Index</a>
+                        <a href="DSA programs\queue\q-1p.c" onclick="changeIframeSrc('DSA programs\queue\q-1p.c')">Program 1</a>
+                        <a href="DSA programs\queue\q-2p.c" onclick="changeIframeSrc('DSA programs\queue\q-2p.c')">Program 2</a>
+                        <a href="DSA programs\queue\q-3p.c" onclick="changeIframeSrc('DSA programs\queue\q-3p.c')">Program 3</a>
+                        <a href="DSA programs\queue\q-4p.c" onclick="changeIframeSrc('DSA programs\queue\q-4p.c')">Program 4</a>
+                        <a href="DSA programs\queue\q-5p.c" onclick="changeIframeSrc('DSA programs\queue\q-5p.c')">Program 5</a>
+                        <a href="DSA programs\queue\q-6p.c" onclick="changeIframeSrc('DSA programs\queue\q-6p.c')">Program 6</a>
+                        <a href="DSA programs\queue\q-7p.c" onclick="changeIframeSrc('DSA programs\queue\q-7p.c')">Program 7</a>
+                        <a href="DSA programs\queue\q-8p.c" onclick="changeIframeSrc('DSA programs\queue\q-8p.c')">Program 8</a>
+                        <a href="DSA programs\queue\q-9p.c" onclick="changeIframeSrc('DSA programs\queue\q-9p.c')">Program 9</a>
+                        <a href="DSA programs\queue\q-10p.c" onclick="changeIframeSrc('DSA programs\queue\q-10p.c')">Program 10</a>
+                        
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed"href="#">Linklist</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\LL.html" onclick="changeIframeSrc('index_files\LL.html')">Index</a>
+                        <a href="DSA programs\Linked list\LL1.C" onclick="changeIframeSrc('DSA programs\Linked list\LL1.C')">Program 1</a>
+                        <a href="DSA programs\Linked list\LL2.C" onclick="changeIframeSrc('DSA programs\Linked list\LL2.C')">Program 2</a>
+                        <a href="DSA programs\Linked list\LL3.C" onclick="changeIframeSrc('DSA programs\Linked list\LL3.C')">Program 3</a>
+                        <a href="DSA programs\Linked list\LL4.C" onclick="changeIframeSrc('DSA programs\Linked list\LL4.C')">Program 4</a>
+                        <a href="DSA programs\Linked list\LL5.C" onclick="changeIframeSrc('DSA programs\Linked list\LL5.C')">Program 5</a>
+                        <a href="DSA programs\Linked list\LL6.C" onclick="changeIframeSrc('DSA programs\Linked list\LL6.C')">Program 6</a>
+                        <a href="DSA programs\Linked list\LL7.C" onclick="changeIframeSrc('DSA programs\Linked list\LL7.C')">Program 7</a>
+                        <a href="DSA programs\Linked list\LL8.C" onclick="changeIframeSrc('DSA programs\Linked list\LL8.C')">Program 8</a>
+                        
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed"href="#">Tree</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\que.html" onclick="changeIframeSrc('index_files\que.html')">Index</a>
+                        <a href="DSA programs\tree\tree1.html" onclick="changeIframeSrc('DSA programs\tree\tree1.html\1')">Program 1</a>
+                        <a href="DSA programs\tree\tree2.html" onclick="changeIframeSrc('DSA programs\tree\tree2.html\1')">Program 2</a>
+                        <a href="DSA programs\tree\tree3.html" onclick="changeIframeSrc('DSA programs\tree\tree3.html\1')">Program 3</a>
+                        <a href="DSA programs\tree\tree4.html" onclick="changeIframeSrc('DSA programs\tree\tree4.html\1')">Program 4</a>
+                        <a href="DSA programs\tree\tree5.html" onclick="changeIframeSrc('DSA programs\tree\tree5.html\1')">Program 5</a>
+                        <a href="DSA programs\tree\tree6.html" onclick="changeIframeSrc('DSA programs\tree\tree6.html\1')">Program 6</a>
+                        <a href="DSA programs\tree\tree7.html" onclick="changeIframeSrc('DSA programs\tree\tree7.html\1')">Program 7</a>
+                        <a href="DSA programs\tree\tree8.html" onclick="changeIframeSrc('DSA programs\tree\tree8.html\1')">Program 8</a>
+                        <a href="DSA programs\tree\tree9.html" onclick="changeIframeSrc('DSA programs\tree\tree9.html\1')">Program 9</a>
+                        <a href="DSA programs\tree\tree10.html" onclick="changeIframeSrc('DSA programs\tree\tree10.html\1')">Program 10</a>
+                        <a href="DSA programs\tree\tree11.html" onclick="changeIframeSrc('DSA programs\tree\tree11.html\1')">Program 11</a>
+                        <a href="DSA programs\tree\tree12.html" onclick="changeIframeSrc('DSA programs\tree\tree12.html\1')">Program 12</a>
+                        <a href="DSA programs\tree\tree13.html" onclick="changeIframeSrc('DSA programs\tree\tree13.html\1')">Program 13</a>
+                        <a href="DSA programs\tree\tree14.html" onclick="changeIframeSrc('DSA programs\tree\tree14.html\1')">Program 14</a>
+                        <a href="DSA programs\tree\tree15.html" onclick="changeIframeSrc('DSA programs\tree\tree15.html\1')">Program 15</a>
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed" href="#">Recursion</a>
+                    <div class="popup-list-content">
+                        <a href="index_files\que.html" onclick="changeIframeSrc('index_files\que.html')">Index</a>
+                        <a href="DSA programs\recursion\recursion1.html" onclick="changeIframeSrc('DSA programs\recursion\recursion1.html')">Program 1</a>
+                        <a href="DSA programs\recursion\recursion2.html" onclick="changeIframeSrc('DSA programs\recursion\recursion2.html')">Program 2</a>
+                        <a href="DSA programs\recursion\recursion3.html" onclick="changeIframeSrc('DSA programs\recursion\recursion3.html')">Program 3</a>
+                        <a href="DSA programs\recursion\recursion4.html" onclick="changeIframeSrc('DSA programs\recursion\recursion4.html')">Program 4</a>
+                        <a href="DSA programs\recursion\recursion5.html" onclick="changeIframeSrc('DSA programs\recursion\recursion5.html')">Program 5</a>
+                        <a href="DSA programs\recursion\recursion6.html" onclick="changeIframeSrc('DSA programs\recursion\recursion6.html')">Program 6</a>
+                        <a href="DSA programs\recursion\recursion7.html" onclick="changeIframeSrc('DSA programs\recursion\recursion7.html')">Program 7</a>
+                    </div>
+                </div><br>
+            </section>
+            <section class="sections" id="section3">
+                <!-- <h1>Section 3</h1>
+                <p>This is the third section of the HTML document.</p> -->
+                <iframe src="1.png"></iframe> <!-- Replace the URL with your iframe source -->
+            </section>
+        </div>
+        <script>
+        function changeIframeSrc(src) {
+            var iframe = document.querySelector('iframe');
+            iframe.src = src;
+        }
+    </script>
+        <script>
+            const iframe = document.querySelector('iframe');
+            const popupLinks = document.querySelectorAll('.popup-list-content a');
+
+            popupLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const linkSrc = e.target.getAttribute('href');
+                    iframe.src = linkSrc;
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Paragraphs with a Heading</title>
+    <style>
+        body {
+            font-size: 22px;
+        }
+        h2,h3{
+            text-align: center;
+            text-decoration: underline solid;
+        }
+    </style>
+</head>
+<body>
+    <h2>INDEX</h2>
+    <h3>QUEUE</h3>
+    <p>1. IMPLEMENT THE OPERATIONS OF SIMPLE QUEUE IN AN INTEGER ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+2. IMPLEMENT THE OPERATIONS OF SIMPLE QUEUE IN AN STRING ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+3. IMPLEMENT THE OPERATIONS OF QUEUE DYNAMICALLY OF INTEGERS (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+4. IMPLEMENT THE OPERATIONS OF QUEUE DYNAMICALLY OF STRING (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+5. IMPLEMENT THE OPERATIONS OF CIRCULAR QUEUE IN AN INTEGER ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+6. IMPLEMENT THE OPERATIONS OF CIRCULAR QUEUE IN AN STRING ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+7. IMPLEMENT THE OPERATIONS OF PRIORITY QUEUE IN AN INTEGER ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+8. IMPLEMENT THE OPERATIONS OF PRIORITY QUEUE IN AN STRING ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)
+<br>
+9. IMPLEMENT THE OPERATIONS OF DOUBLE ENDED QUEUE IN AN INTEGER ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+10. IMPLEMENT THE OPERATIONS OF DOUBLE ENDED QUEUE IN AN STRING ARRAY (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+11. IMPLEMENT THE OPERATIONS OF PRIORITY QUEUE DYNAMICALLY OF INTEGERS (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+12. IMPLEMENT THE OPERATIONS OF PRIORITY QUEUE DYNAMICALLY OF STRING (INSERT, DELETE, PEEK, ISEMPTY, ISFULL)<br>
+
+13. Find the first circular tour that visits all petrol pumps<br>
+
+Explanation -<br>
+
+Given information about N petrol pumps (say arr[]) that are present in a circular path. The information consists of the distance of the next petrol pump from the current one (in arr[i][1]) and the amount of petrol stored in that petrol pump (in arr[i][0]). Consider a truck with infinite capacity that consumes 1 unit of petrol to travel 1 unit distance. The task is to find the index of the first starting point such that the truck can visit all the petrol pumps and come back to that starting point. Note: Return -1 if no such tour exists. Examples: Input: arr[] = {{4, 6}, {6, 5}, {7, 3}, {4, 5}}. Output: 1 Explanation: If started from 1st index then a circular tour can be covered. Input: arr[] {{6, 4}, {3, 6}, {7, 3}} Output: 2
+
+14. Length of the longest valid substring<br>
+
+Explanation -<br>
+
+Given a string consisting of opening and closing parenthesis, find the length of the longest valid parenthesis substring. Examples: Input : ((() Output : 2 Explanation : () Input: )()()) Output : 4 Explanation: ()() Input: ()(())))) Output: 6 Explanation: ()(())
+
+15. Find the Next Greater Element<br>
+
+Explanation -<br>
+
+Given an array arr[ ] of size N having elements, the task is to find the next greater element for each element of the array in order of their appearance in the array. Next greater element of an element in the array is the nearest element on the right which is greater than the current element. If there does not exist next greater of current element, then next greater element for current element is -1. For example, next greater of the last element is always -1. Example 1: Input: N = 4, arr[] = [1 3 2 4] Output: 3 4 4 -1 Explanation: In the array, the next larger element to 1 is 3 , 3 is 4 , 2 is 4 and for 4 ? since it doesn't exist, it is -1. Example 2: Input: N = 5, arr[] [6 8 0 1 3] Output: 8 -1 1 3 -1 Explanation: In the array, the next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0 it is 1 , for 1 it is 3 and then for 3 there is no larger element on right and hence -1.<br>
+
+16. Find Next Smaller Element<br>
+
+Explanation -<br>
+
+Given an array, print the Next Smaller Element (NSE) for every element. The NSE for an element x is the first smaller element on the right side of x in the array. Elements for which no smaller element exist (on the right side), consider NSE as -1. Examples: Input: [4, 8, 5, 2, 25] Output: [2, 5, 2, -1, -1] Explanation: The first element smaller than 4 having index > 0 is 2. The first element smaller than 8 having index > 1 is 5. The first element smaller than 5 having index > 2 is 2. There are no elements smaller than 4 having index > 3. There are no elements smaller than 4 having index > 4. Input: [13, 7, 6, 12] Output: [7, 6, -1, -1] Explanation: The first element smaller than 13 having index > 0 is 7. The first element smaller than 7 having index > 1 is 6. There are no elements smaller than 6 having index > 2. There are no elements smaller than 12 having index > 3.<br>
+
+17. Queue based approach for first non-repeating character in a stream<br>
+
+Explanation -<br>
+
+Given a stream of characters and we have to find first non repeating character each time a character is inserted to the stream. Examples: Input : a a b c Output : a -1 b b Input : a a c Output : a -1 c<br>
+
+18. Reverse First K elements of Queue<br>
+
+Explanation -<br>
+
+Given an integer K and a queue of integers, we need to reverse the order of the first K elements of the queue, leaving the other elements in the same relative order. Only following standard operations are allowed on queue. enqueue(x) : Add an item x to rear of queue dequeue() : Remove an item from front of queue size() : Returns number of elements in queue. front() : Finds front item. Note: The above operations represent the general processings. In-built functions of the respective languages can be used to solve the problem. Example 1: Input: 5 3 1 2 3 4 5 Output: 3 2 1 4 5 Explanation: After reversing the given input from the 3rd position the resultant output will be 3 2 1 4 5. Example 2: Input: 4 4 4 3 2 1 Output: 1 2 3 4 Explanation: After reversing the given input from the 4th position the resultant output will be 1 2 3 4.<br>
+
+19. Queue Reversal<br>
+
+Explanation -<br>
+
+Given a Queue Q containing N elements. The task is to reverse the Queue. Your task is to complete the function rev(), that reverses the N elements of the queue. Example 1: Input: 6 4 3 1 10 2 6 Output: 6 2 10 1 3 4 Explanation: After reversing the given elements of the queue , the resultant queue will be 6 2 10 1 3 4. Example 2: Input: 4 4 3 2 1 Output: 1 2 3 4 Explanation: After reversing the given elements of the queue , the resultant queue will be 1 2 3 4.<br>
+
+20. Rotten Oranges<br>
+
+Explanation -<br>
+
+Given a grid of dimension nxm where each cell in the grid can have values 0, 1 or 2 which has the following meaning: 0 : Empty cell 1 : Cells have fresh oranges 2 : Cells have rotten oranges We have to determine what is the earliest time after which all the oranges are rotten. A rotten orange at index [i,j] can rot other fresh orange at indexes [i-1,j], [i+1,j], [i,j-1], [i,j+1] (up, down, left and right) in unit time. Example 1: Input: grid = {{0,1,2},{0,1,2},{2,1,1}} Output: 1 Explanation: The grid is- 0 1 2 0 1 2 2 1 1 Oranges at positions (0,2), (1,2), (2,0) will rot oranges at (0,1), (1,1), (2,2) and (2,1) in unit time. Example 2: Input: grid = {{2,2,0,1}} Output: -1 Explanation: The grid is- 2 2 0 1 Oranges at (0,0) and (0,1) can't rot orange at (0,3).</p>
+    
+    
+</body>
+</html>
